@@ -30,6 +30,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("javax.annotation:javax.annotation-api:1.3.2")
+	testImplementation("net.javacrumbs.json-unit:2.38.0")
 }
 
 tasks.withType<Test> {
