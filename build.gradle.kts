@@ -26,11 +26,13 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	compileOnly("org.projectlombok:lombok")
-//,
+//	implementation("org.postgresql:postgresql:42.6.0")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("javax.annotation:javax.annotation-api:1.3.2")
-	testImplementation("net.javacrumbs.json-unit:2.38.0")
+	testImplementation("net.javacrumbs.json-unit:json-unit-assertj:3.2.2")
+	testImplementation("net.javacrumbs.json-unit:json-unit:3.2.2")
+
 }
 
 tasks.withType<Test> {

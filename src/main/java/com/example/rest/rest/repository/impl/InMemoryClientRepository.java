@@ -28,6 +28,7 @@ public class InMemoryClientRepository implements ClientRepository {
 
     private final Map<Long, Client> repository = new ConcurrentHashMap<>();
 
+
     private final AtomicLong currentId = new AtomicLong(1L);
 
     @Override
