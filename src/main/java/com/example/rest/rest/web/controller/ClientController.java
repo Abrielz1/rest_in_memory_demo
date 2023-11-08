@@ -1,4 +1,4 @@
-package com.example.rest.rest.web.v1.controller;
+package com.example.rest.rest.web.controller;
 
 import com.example.rest.rest.mapper.v1.ClientMapper;
 import com.example.rest.rest.model.Client;
@@ -6,10 +6,12 @@ import com.example.rest.rest.service.ClientService;
 import com.example.rest.rest.web.dto.ClientListResponse;
 import com.example.rest.rest.web.dto.ClientResponse;
 import com.example.rest.rest.web.dto.UpsertClientRequest;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -33,7 +35,7 @@ public class ClientController {
     }
 
     @PostMapping
-    public ResponseEntity<ClientResponse> createClient(@RequestBody UpsertClientRequest request) {
+    public ResponseEntity<ClientResponse> createClient(@RequestBody @Valid UpsertClientRequest request) {
         Client newClient = mapper.requestToClient(request);
         service.save(newClient);
         return ResponseEntity.status(HttpStatus.CREATED).body(mapper.clientToResponse(newClient));

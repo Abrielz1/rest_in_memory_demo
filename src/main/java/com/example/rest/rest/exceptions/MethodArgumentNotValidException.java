@@ -3,10 +3,10 @@ package com.example.rest.rest.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class ObjectNotFoundException extends RuntimeException {
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class MethodArgumentNotValidException extends RuntimeException {
 
-    public ObjectNotFoundException(String message) {
+    public MethodArgumentNotValidException(String message) {
         super(message);
     }
 }

@@ -6,10 +6,8 @@ import com.example.rest.rest.repository.ClientRepository;
 import com.example.rest.rest.service.ClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.text.MessageFormat;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

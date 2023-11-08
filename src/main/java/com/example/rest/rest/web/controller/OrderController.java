@@ -1,4 +1,4 @@
-package com.example.rest.rest.web.v1.controller;
+package com.example.rest.rest.web.controller;
 
 import com.example.rest.rest.mapper.v1.OrderMapper;
 import com.example.rest.rest.model.Order;
@@ -19,7 +19,6 @@ public class OrderController {
     private final OrderService service;
 
     private final OrderMapper mapper;
-
 
     @GetMapping
     public ResponseEntity<OrderListResponse> findAll() {
